@@ -4,12 +4,12 @@
 #include <string>
 
 template<typename type, int size>
-  class TStack {
-  private:
+class TStack {
+ private:
     type* arr;
     int top;
-    
-  public:
+
+ public:
     TStack() {
         arr = new type[size];
         top = -1;
