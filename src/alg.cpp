@@ -31,7 +31,7 @@ std::string infx2pstfx(std::string inf) {
     int pr;
     pr = priority(x);
     if (pr > -1) {
-        if ((pr == 0 || pr > priority(tem) 
+        if ((pr == 0 || pr > priority(tem)
              || stackChar.isEmpty()) && x != ')') {
             if (stackChar.isEmpty())
             tem = x;
@@ -46,7 +46,7 @@ std::string infx2pstfx(std::string inf) {
     if (stackChar.isEmpty())
     tem = 0;
     } else {
-        while (!stackChar.isEmpty() 
+        while (!stackChar.isEmpty()
                && priority(stackChar.get()) >= pr) {
         post.push_back(stackChar.get());
         post.push_back(' ');
@@ -99,7 +99,7 @@ int eval(std::string post) {
     while (x != ' ') {
         insertInt += (x - 48) * y;
         y *= 10;
-        x = pst[++i];
+        x = post[++i];
     }
     stackInt.push(insertInt);
     } else {
@@ -112,7 +112,7 @@ int eval(std::string post) {
         int res = calculating(oper, num1, num2);
         stackInt.push(res);
     }
-    if (i < pst.size())
+    if (i < post.size())
     x = post[++i];
     else
         x = 0;
