@@ -1,3 +1,4 @@
+// Copyright 2021 NNTU-CS
 #include <string>
 #include "tstack.h"
 int priority(char x) {
@@ -104,7 +105,7 @@ int eval(std::string post) {
         stackInt.pop();
         int num1 = stackInt.get();
         stackInt.pop();
-        int res=calculating(oper, num1, num2);
+        int res = calculating(oper, num1, num2);
         stackInt.push(res);
     }
     if (i < pst.size())
