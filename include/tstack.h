@@ -4,10 +4,11 @@
 
 template<typename type, int size>
 class TStack {
-private:
+ private:
     type* arr;
     int top;
-public:
+    
+ public:
     TStack() :top(-1) {
         arr = new type[size];
     }
