@@ -19,9 +19,6 @@ class TStack {
     void push(type a) {
         arr[++top] = a;
     }
-    type get() {
-        return arr[top];
-    }
     type pop() {
         return arr[top--];
     }
