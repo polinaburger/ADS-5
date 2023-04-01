@@ -1,6 +1,7 @@
 // Copyright 2021 NNTU-CS
 #include <string>
 #include "tstack.h"
+
 int priority(char x) {
     switch (x) {
         case '(':
