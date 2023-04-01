@@ -6,11 +6,11 @@ template<typename type, int size>
 class TStack {
  private:
     type* arr;
-    int top;
-    
+    int top;  
  public:
-    TStack() :top(-1) {
+    TStack() {
         arr = new type[size];
+        top = -1;
     }
     type get() const {
         return arr[top];
@@ -30,6 +30,4 @@ class TStack {
             arr[++top] = item;
     }
 };
-
-
 #endif  // INCLUDE_TSTACK_H_
