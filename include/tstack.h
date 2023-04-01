@@ -4,12 +4,12 @@
 
 template<typename type, int size>
 class TStack {
- private:
-    T* arr;
-    int head;
- public:
-    TStack() :head(-1) {
-        arr = new T[size];
+private:
+    type* arr;
+    int top;
+public:
+    TStack() :top(-1) {
+        arr = new type[size];
     }
     type get() const {
         return arr[top];
@@ -27,7 +27,6 @@ class TStack {
     void push(type item) {
         if (top < size-1)
             arr[++top] = item;
-
     }
 };
 
