@@ -1,13 +1,15 @@
 // Copyright 2021 NNTU-CS
 #ifndef INCLUDE_TSTACK_H_
 #define INCLUDE_TSTACK_H_
+#include <string>
 
 template<typename type, int size>
-    class TStack {
- private:
+  class TStack {
+  private:
     type* arr;
     int top;
- public:
+    
+  public:
     TStack() {
         arr = new type[size];
         top = -1;
@@ -20,7 +22,7 @@ template<typename type, int size>
     }
   }
     bool isEmpty() const {
-        return top==-1
+        return top == -1;
     }
     bool isFull() const {
         return top == size -1;
@@ -30,7 +32,7 @@ template<typename type, int size>
             top--;
     }
     void push(type item) {
-        if(top <size-1)
+        if (top <size-1)
             arr[++top] = item;
     }
 };
