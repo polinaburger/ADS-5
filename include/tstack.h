@@ -1,5 +1,6 @@
 
 // Copyright 2021 NNTU-CS
+#include <string>
 #ifndef INCLUDE_TSTACK_H_
 #define INCLUDE_TSTACK_H_
 
@@ -19,6 +20,13 @@ class TStack {
     void push(type a) {
         arr[++top] = a;
     }
+    const type& get() {
+    if (isEmpty()) {
+      throw std::string("empty");
+    } else {
+      return arr[top];
+    }
+  }
     type pop() {
         return arr[top--];
     }
