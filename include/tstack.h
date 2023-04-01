@@ -4,14 +4,16 @@
 
 template<typename type, int size>
 class TStack {
-    private:
-        type arr[100];
-        int top;
-    public:
-        TStack : top(-1) { }
-        type get() const {
-            return arr[top];
-        }
+ private:
+    T* arr;
+    int head;
+ public:
+    TStack() :head(-1) {
+        arr = new T[size];
+    }
+    type get() const {
+        return arr[top];
+    }
     bool isEmpty() const {
         return top == -1;
     }
