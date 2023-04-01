@@ -1,8 +1,3 @@
-// Copyright 2021 NNTU-CS
-#include <string>
-#include <map>
-#include "tstack.h"
-
 #include <string>
 #include "tstack.h"
 int priority(char x) {
@@ -104,6 +99,7 @@ int eval(std::string post) {
     stackInt.push(insertInt);
     } else {
         char oper = x;
+        i++;
         int num2 = stackInt.get();
         stackInt.pop();
         int num1 = stackInt.get();
